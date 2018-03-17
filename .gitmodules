@@ -1,0 +1,3 @@
+[submodule "class/db"]
+	path = class/db
+	url = https://github.com/Istani/class.database.php.git

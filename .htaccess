@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([\w]+)/?([\w]+)? /index.php?kategorie=$1&details=$2
