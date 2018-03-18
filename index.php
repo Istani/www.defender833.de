@@ -56,7 +56,9 @@ require_once "config.php";
           if (!isset($_GET['details'])) {$_GET['details']="";}
           
           switch ($_GET['kategorie']) {
-            
+            case 'Videos':
+            include("pages/video_list.php");
+            break;
             default:
             include("pages/about_me.php");
             

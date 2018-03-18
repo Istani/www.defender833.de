@@ -16,7 +16,7 @@
             <td> Videos: </td><td><?php echo $SYTH['youtube_channel']['youtube_statistics_videocount']; ?></td>
           </tr>
           <tr>
-            <td> Abonennten: </td><td><?php echo $SYTH['youtube_channel']['youtube_statistics_subscribercount']; ?></td>
+            <td> Abonnenten: </td><td><?php echo $SYTH['youtube_channel']['youtube_statistics_subscribercount']; ?></td>
           </tr>
           <tr>
             <td> Kanal: </td><td><a href="https://www.youtube.com/<?php echo $SYTH['youtube_channel']['youtube_snippet_customurl']; ?>"><?php echo "https://www.youtube.com/".$SYTH['youtube_channel']['youtube_snippet_customurl']; ?></a></td>
