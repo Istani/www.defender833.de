@@ -28,7 +28,7 @@ require_once "config.php";
     <table>
       <tr>
         <td>
-          <div class="div-border rounded-corner div-shadow" style="width:1060px;height:173px">
+          <div class="div-border rounded-corner div-shadow div-content" style="width:1060px;height:173px">
             <?php
             echo '<img src="'.$SYTH['youtube_channel']['youtube_brandingsettings_image_bannerimageurl'].'" alt="'.$SYTH['youtube_channel']['youtube_snippet_title'].' banner">';
             ?>
@@ -38,11 +38,10 @@ require_once "config.php";
       </tr>
       <tr>
         <td>
-          <div class="div-border rounded-corner div-shadow">
+          <div class="div-border rounded-corner div-shadow div-content">
             <ul class="nav">
               <li class="nav"><a href="<?php echo $site['base_dir']; ?>">About me</a></li>
               <li class="nav"><a href="<?php echo $site['base_dir']; ?>Videos">Videos</a></li>
-              <li class="nav"><a href="<?php echo $site['base_dir']; ?>Games">Games & More</a></li>
             </ul>
           </div>
           <br>
@@ -72,8 +71,18 @@ require_once "config.php";
       </tr>
       <tr>
         <td>
-          <div class="div-border rounded-corner div-shadow">
-            FOOTER
+          <div class="div-border rounded-corner div-shadow div-content">
+            <center>
+              <?php
+              $links=$database->sql_select("user_ads","*","type LIKE 'Link' AND owner LIKE '".$SYTH['user']['email']."'");
+              for ($count_links=0;$count_links<count($links);$count_links++) {
+                echo '<a href="'.$links[$count_links]['link'].'">'.$links[$count_links]['title'].'</a> | ';
+              }
+              ?>
+              <a href="https://www.youtube.com/<?php echo $SYTH['youtube_channel']['youtube_snippet_customurl']; ?>">YouTube</a>
+              <br>
+              Content by: Defender833 | Code by: Istani0815
+            </center>
           </div>
           <br>
         </td>
