@@ -46,13 +46,19 @@ $database->sql_exec("CREATE TEMPORARY TABLE youtube_playlist_lastentry AS
         <?php
         $this_video_list=$database->sql_select("youtube_playlists_items INNER JOIN youtube_videos ON youtube_playlists_items.youtube_snippet_resourceid_videoid=youtube_videos.youtube_id", "youtube_videos.*", "youtube_playlists_items.youtube_snippet_playlistid LIKE '".$SYTH['playlists_overview'][$count_playlists]['playlist_id']."' AND youtube_videos.youtube_status_uploadstatus LIKE 'processed' ORDER BY youtube_videos.youtube_snippet_publishedat DESC");
         echo '<br>';
+        echo '<p style="width:1060px;">';
+        echo nl2br($this_playlist['youtube_snippet_description']);
+        echo '</p>';
+        echo '<br>';
+        echo '<hr>';
+        echo '<br>';
         echo '<table>';
         echo '<tr>';
         
         for ($count_video=0;$count_video<8;$count_video++) {
           echo '<td style="width:130px;"> &nbsp; ';
           if (isset($this_video_list[$count_video])) {
-            echo '<a href="">';
+            echo '<a href="'.$site['base_dir'].'Video/'.$this_video_list[$count_video]['youtube_id'].'">';
             echo '<img src="'.$this_video_list[$count_video]['youtube_snippet_thumbnails_default_url'].'" alt="'.$this_video_list[$count_video]['youtube_snippet_title'].'">';// 	youtube_snippet_thumbnails_default_url
             echo '</a>';
           }

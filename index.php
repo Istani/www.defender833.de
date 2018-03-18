@@ -5,7 +5,7 @@ require_once "config.php";
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  
+  <link rel="icon" href="<?php echo $site['base_dir']; ?>favicon.ico" type="image/x-icon">
   <title><?php echo $SYTH['youtube_channel']['youtube_snippet_title']; ?></title>
   <link href="<?php echo $site['base_dir']; ?>style/main_style.css" type="text/css" rel="stylesheet">
   
@@ -39,11 +39,10 @@ require_once "config.php";
       <tr>
         <td>
           <div class="div-border rounded-corner div-shadow">
-            <ul>
-              <li><a href="<?php echo $site['base_dir']; ?>">About me</a></li>
-              <li><a href="<?php echo $site['base_dir']; ?>/Videos">Videos</a></li>
-              <li><a href="<?php echo $site['base_dir']; ?>/Games">Games & More</a></li>
-              
+            <ul class="nav">
+              <li class="nav"><a href="<?php echo $site['base_dir']; ?>">About me</a></li>
+              <li class="nav"><a href="<?php echo $site['base_dir']; ?>Videos">Videos</a></li>
+              <li class="nav"><a href="<?php echo $site['base_dir']; ?>Games">Games & More</a></li>
             </ul>
           </div>
           <br>
@@ -58,6 +57,9 @@ require_once "config.php";
           switch ($_GET['kategorie']) {
             case 'Videos':
             include("pages/video_list.php");
+            break;
+            case 'Video':
+            include("pages/video_play.php");
             break;
             default:
             include("pages/about_me.php");
@@ -78,11 +80,6 @@ require_once "config.php";
       </tr>
     </table>
   </center>
-  <?php
-  echo '<pre>';
-  echo var_dump($_SERVER);
-  echo '</pre>';
-  ?>
   <script type="text/javascript">
   change_all_links();
   </script>

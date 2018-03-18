@@ -48,7 +48,7 @@
   <br>
   
   <center>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $SYTH['youtube_channel']['youtube_brandingsettings_channel_unsubscribedtrailer']; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe width="1000" height="563" src="https://www.youtube.com/embed/<?php echo $SYTH['youtube_channel']['youtube_brandingsettings_channel_unsubscribedtrailer']; ?>?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </center>
   
   <br>
