@@ -21,7 +21,6 @@ for ($count_games=0;$count_games<count($game_price);$count_games++) {
             <?php echo $tg['min_price']; ?>€ - <?php echo $tg['max_price']; ?>€<br>
             &nbsp;<br>
       </div>
-      <br>
 <?php
 }
 /*
