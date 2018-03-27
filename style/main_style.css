@@ -40,6 +40,14 @@ h2 {
   max-width:1060px;
 }
 
+.div-game {
+  float: left;
+  padding: 10px;
+}
+.break-game {
+  float:none;
+}
+
 
 /* Nav Bar */
 ul.nav  {
