@@ -20,6 +20,7 @@ for ($count_games=0;$count_games<count($game_price);$count_games++) {
             <?php echo $tg['count_video']; ?> Videos<br>
             <?php } ?>
       </div>
+      <br>
 <?php
 }
 /*
