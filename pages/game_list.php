@@ -10,7 +10,7 @@ GREATEST(".$price_collums.") AS max_price,
 LEAST(".$price_collums.") AS min_price,
 (GREATEST(".$price_collums.")-LEAST(".$price_collums.")) AS diff_price
 ","description NOT LIKE '' AND LEAST(".$price_collums.")>0 AND (bot_gamelist_video.channel IS NULL OR bot_gamelist_video.channel='".$SYTH['user']['youtube_user']."')
-ORDER BY CAST(bot_gamelist_video.count_video AS UNSIGNED) DESC, diff_price DESC",true);
+ORDER BY CAST(bot_gamelist_video.count_video AS UNSIGNED) DESC, diff_price DESC, bot_gamelist.name",true);
 
 for ($count_games=0;$count_games<count($game_price);$count_games++) {
       $tg=$game_price[$count_games];
