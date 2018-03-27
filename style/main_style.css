@@ -42,11 +42,12 @@ h2 {
 
 .div-game {
   float: right;
-  margin: 10px;
-  
+  margin: 5px;
+
   overflow: hidden;
   max-width:192px;
   
+  word-wrap: none;
 }
 .break-game {
   float:none;
