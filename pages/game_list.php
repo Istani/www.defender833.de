@@ -12,7 +12,7 @@ ORDER BY CAST(bot_gamelist_video.count_video AS UNSIGNED) DESC, diff_price DESC"
 for ($count_games=0;$count_games<count($game_price);$count_games++) {
       $tg=$game_price[$count_games];
 ?>
-      <div class="div-border rounded-corner div-shadow div-content">
+      <div class="div-border rounded-corner div-shadow">
             <img src="<?php echo $tg['banner']; ?>" alt="<?php echo $tg['name']; ?>"><br>
             <?php echo $tg['name']; ?><br>
             <?php echo $tg['min_price']; ?>€ - <?php echo $tg['max_price']; ?>€<br>
