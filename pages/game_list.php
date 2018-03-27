@@ -1,11 +1,11 @@
 <div class="div-border rounded-corner div-shadow div-content">
       <h1>Games & More:</h1>
 <?php
-
+$price_collums="steam_price,humble_price";
 $game_price=$database->sql_select("bot_gamelist","*, 
-GREATEST(steam_price,humble_price) AS max_price,
-LEAST(steam_price,humble_price) AS min_price,
-(max_price-min_price) AS diff_price
+GREATEST(".$price_collums.") AS max_price,
+LEAST(".$price_collums.") AS min_price,
+(GREATEST(".$price_collums.")-LEAST(".$price_collums.")) AS diff_price
 ","description NOT LIKE '' 
 ORDER BY diff_price DESC",true);
 
