@@ -1,5 +1,6 @@
 <div class="div-border rounded-corner div-shadow div-content">
       <h1>Games & More:</h1>
+      <center>
 <?php
 $price_collums="steam_price,humble_price";
 $game_price=$database->sql_select("bot_gamelist LEFT JOIN bot_gamelist_video ON bot_gamelist.name=bot_gamelist_video.name","bot_gamelist.*, bot_gamelist_video.count_video,
@@ -30,4 +31,5 @@ echo '</pre>';
 */
 ?>
 <span class="break-game"></span>
+</center>
 </div>
