@@ -1,6 +1,8 @@
 <div class="div-border rounded-corner div-shadow div-content">
       <h1>Games & More:</h1>
+      &nbsp;<br>
       <center>
+            <div>
 <?php
 $price_collums="steam_price,humble_price";
 $game_price=$database->sql_select("bot_gamelist LEFT JOIN bot_gamelist_video ON bot_gamelist.name=bot_gamelist_video.name","bot_gamelist.*, bot_gamelist_video.count_video,
@@ -16,12 +18,12 @@ for ($count_games=0;$count_games<count($game_price);$count_games++) {
       // 1060 / 5 - (5*20)
       // 192 - 89
 ?>
-      <div class="div-border rounded-corner div-shadow div-game">
-            <img src="<?php echo $tg['banner']; ?>" alt="<?php echo $tg['name']; ?>" width="192" height="89"><br>
-            <?php echo $tg['name']; ?><br>
-            <?php echo $tg['min_price']; ?>€ - <?php echo $tg['max_price']; ?>€<br>
-            &nbsp;<br>
-      </div>
+                  <div class="div-border rounded-corner div-shadow div-game">
+                        <img src="<?php echo $tg['banner']; ?>" alt="<?php echo $tg['name']; ?>" width="192" height="89"><br>
+                        <?php echo $tg['name']; ?><br>
+                        <?php echo $tg['min_price']; ?>€ - <?php echo $tg['max_price']; ?>€<br>
+                        &nbsp;<br>
+                  </div>
 <?php
 }
 /*
@@ -30,6 +32,7 @@ var_dump($game_price);
 echo '</pre>';
 */
 ?>
-<span class="break-game"></span>
-</center>
+                  <span class="break-game"></span>
+            </div>     
+      </center>
 </div>
