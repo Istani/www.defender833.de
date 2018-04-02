@@ -50,7 +50,7 @@
                 <div class="steam div-border"><span width="100%" style="float:right"><?php echo $this_game['steam_price']; ?>&nbsp;€</span><span>Steam</span></div>
                 </a>
                 <a href="<?php echo $this_game['humble_link']; ?>?partner=<?php echo $SYTH['user']['partner_humble']; ?>" class="link">
-                <div class="humble div-border"><span width="100%" style="float:right"><?php echo $this_game['humble_price']; ?>&nbsp;€</span><span>Humble Bundle</span></div>
+                <div class="humble div-border"><span width="100%" style="float:right"><?php echo $this_game['humble_price']; ?>&nbsp;€</span><span>Humble Bundle*</span></div>
                 </a>
                 <?php
                     $amazon_links=$database->sql_select("bot_game_amazon", "*", "game_name like '".$this_game['name']."' AND link NOT LIKE '' AND `ignore`=0 ORDER BY score DESC, text");
@@ -60,17 +60,18 @@
                         for ($count_amazon=0;$count_amazon<count($amazon_links);$count_amazon++) {
                             $ca=$amazon_links[$count_amazon];
                             $ca['link']=str_replace("istani0815-21", $SYTH['user']['partner_amazon'], $ca['link']);
-                            while (strlen($ca['text'])>70) {
+                            while (strlen($ca['text'])>60) {
                                 $parts=explode(" ",$ca['text']);
                                 unset($parts[count($parts)-1]);
                                 $ca['text']=implode(" ",$parts);
                                 unset($parts);
                             }
                             echo '<a href="'.$ca['link'].'" class="link">';
-                            echo '<div class="amazon div-border"><span>'.$ca['text'].'</span></div>';
+                            echo '<div class="amazon div-border"><span>'.$ca['text'].'*</span></div>';
                             echo '</a>';
                         }
                     }   
+                    echo '<br>* = Partnerlinks<br>';
                     $show_videos=$database->sql_select("youtube_videos","*", 
                     "youtube_snippet_channelid='".$SYTH['user']['youtube_user']."' 
                     AND youtube_snippet_title LIKE '%".$_GET['details']."%'
