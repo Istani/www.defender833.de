@@ -42,7 +42,7 @@ require_once "config.php";
             <ul class="nav">
               <li class="nav"><a href="<?php echo $site['base_dir']; ?>">About me</a></li>
               <li class="nav"><a href="<?php echo $site['base_dir']; ?>Videos">Videos</a></li>
-              <li class="nav"><a href="<?php echo $site['base_dir']; ?>Games">Games & More</a></li>
+              <li class="nav"><a href="<?php echo $site['base_dir']; ?>Games">Games</a></li>
             </ul>
           </div>
           <br>
@@ -63,6 +63,9 @@ require_once "config.php";
             break;
             case 'Games':
             include("pages/game_list.php");
+            break;
+            case 'Game':
+            include("pages/game_details.php");
             break;
             default:
             include("pages/about_me.php");

@@ -36,7 +36,7 @@ h2 {
 }
 
 .div-content {
-  background-color: #FFFFFF !important;
+  background-color: #CCCCCC !important;
   max-width:1060px;
 }
 
@@ -54,6 +54,43 @@ h2 {
   float:none;
 }
 
+.link div {
+  background-color: #FFFFFF !important;
+  color: #000000;
+  text-decoration: none !important;
+}
+
+.link div:hover {
+  background-color: #666666 !important;
+}
+
+/* AStore Links */
+.steam {
+  background-image: url(http://store.steampowered.com/favicon.ico);
+}
+
+.humble {
+  background-image: url(https://humblebundle-a.akamaihd.net/static/hashed/4c8bbc6fc7b2b8a9fa21e895afe1157188e28bfb.png);
+}
+
+.amazon {
+  background-image: url(https://www.amazon.com/favicon.ico);
+}
+
+.defender {
+  background-image: url(favicon.ico);
+}
+
+.steam, .amazon, .humble, .defender {
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: left center;
+  padding-left: 18px; 
+}
+
+a {
+  text-decoration: none;
+}
 
 /* Nav Bar */
 ul.nav  {
@@ -61,7 +98,7 @@ ul.nav  {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #333333;
 }
 
 li.nav {
@@ -81,7 +118,7 @@ li.nav a {
 }
 
 li.nav a:hover {
-  background-color: #111;
+  background-color: #111111;
 }
 
 /* Video Playlist */
@@ -101,10 +138,10 @@ li.playlist a {
   color: #000;
   padding: 8px 16px;
   text-decoration: none;
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid #555555;
 }
 
 li.playlist a:hover {
-  background-color: #555;
+  background-color: #555555;
   color: white;
 }

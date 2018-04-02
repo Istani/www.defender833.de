@@ -14,4 +14,7 @@ $database->connect_db($mysql['base']);
 
 $SYTH['user']=$database->sql_select("user","*","email='".$site['simple_yth_account']."'",false)[0];
 $SYTH['youtube_channel']=$database->sql_select("youtube_channels","*","youtube_id='".$SYTH['user']['youtube_user']."'",false)[0];
+
+
+$price_collums="steam_price,humble_price";
 ?>
