@@ -40,9 +40,11 @@ require_once "config.php";
         <td>
           <div class="div-border rounded-corner div-shadow div-content">
             <ul class="nav">
-              <li class="nav"><a href="<?php echo $site['base_dir']; ?>">About me</a></li>
+              <li class="nav"><a href="<?php echo $site['base_dir']; ?>">Business Area</a></li>
+              <li class="nav"><a href="<?php echo $site['base_dir']; ?>About">About me</a></li>
               <li class="nav"><a href="<?php echo $site['base_dir']; ?>Videos">Videos</a></li>
               <li class="nav"><a href="<?php echo $site['base_dir']; ?>Games">Games</a></li>
+              <li class="nav"><a href="<?php echo $site['base_dir']; ?>Impressum">Impressum</a></li>
             </ul>
           </div>
           <br>
@@ -67,8 +69,14 @@ require_once "config.php";
             case 'Game':
             include("pages/game_details.php");
             break;
-            default:
+            case 'About':
             include("pages/about_me.php");
+            break;
+            case 'Impressum':
+            include("pages/impressum.php");
+            break;
+            default:
+            include("pages/business.php");
             
           }
           
